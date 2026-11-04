@@ -6,46 +6,33 @@ This project investigates the transient flow of a fluid initially at rest betwee
 
 The dimensionless governing equation is
 
-$$
-\frac{\partial U}{\partial \tau}
-=
-1+\frac{\partial^2 U}{\partial Y^2}
-$$
+$$\frac{\partial U}{\partial \tau} = 1+\frac{\partial^2 U}{\partial Y^2} $$
 
 where
 
-$$
-Y=\frac{y}{h},
+$$ Y=\frac{y}{h},
 \qquad
 \tau=\frac{\nu t}{h^2},
 \qquad
-U=\frac{u}{U_{\infty}}.
-$$
+U=\frac{u}{U_{\infty}}. $$
 
 The boundary and initial conditions are
 
-$$
-U(-1,\tau)=U(1,\tau)=0
-$$
+$$ U(-1,\tau)=U(1,\tau)=0 $$
 
 and
 
-$$
-U(Y,0)=0.
-$$
+$$ U(Y,0)=0 $$
 
 ## Analytical Solution
 
 The steady-state solution is
 
-$$
-U_s(Y)=\frac{1}{2}(1-Y^2).
-$$
+$$ U_s(Y)=\frac{1}{2}(1-Y^2). $$
 
 The transient analytical solution is
 
-$$
-U(Y,\tau)
+$$ U(Y,\tau)
 =
 \frac{1}{2}(1-Y^2)
 -
@@ -55,8 +42,7 @@ U(Y,\tau)
 \cos\left(\frac{(2n+1)\pi Y}{2}\right)
 \exp\left[
 -\frac{(2n+1)^2\pi^2}{4}\tau
-\right].
-$$
+\right]. $$
 
 ## Numerical Methods
 
@@ -68,9 +54,7 @@ Three numerical methods were implemented:
 
 The diffusion number is defined as
 
-$$
-r=\frac{\Delta\tau}{(\Delta Y)^2}.
-$$
+$$ r=\frac{\Delta\tau}{(\Delta Y)^2}. $$
 
 For the explicit Euler method, the stability condition is
 
