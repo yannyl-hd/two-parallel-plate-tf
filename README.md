@@ -32,8 +32,7 @@ $$ U_s(Y)=\frac{1}{2}(1-Y^2). $$
 
 The transient analytical solution is
 
-$$ U(Y,\tau)
-=
+$$ U(Y,\tau) =
 \frac{1}{2}(1-Y^2)
 -
 \frac{16}{\pi^3}
@@ -58,9 +57,7 @@ $$ r=\frac{\Delta\tau}{(\Delta Y)^2}. $$
 
 For the explicit Euler method, the stability condition is
 
-$$
-r\leq\frac{1}{2}.
-$$
+$$ r\leq\frac{1}{2}. $$
 
 ## Quantities Evaluated
 
@@ -73,35 +70,29 @@ The numerical solutions were compared with the analytical solution using:
 
 The dimensionless flow rate was calculated by integrating the velocity profile across the channel:
 
-$$
-Q(\tau)=\int_{-1}^{1}U(Y,\tau)\,dY.
-$$
+$$ Q(\tau)=\int_{-1}^{1}U(Y,\tau)\,dY. $$
 
 The wall shear was calculated from the velocity gradient at the wall:
 
-$$
-\tau_w^*
+$$ \tau_w^*
 =
-\left.\frac{\partial U}{\partial Y}\right|_{Y=-1}.
-$$
+\left.\frac{\partial U}{\partial Y}\right|_{Y=-1}. $$
 
 ## Grid Studies
 
 The effects of spatial and temporal discretization were investigated by varying:
 
-- Spatial grid spacing, \(\Delta Y\)
-- Time-step size, \(\Delta\tau\)
-- Diffusion number, \(r\)
+- Spatial grid spacing, $$\(\Delta Y\) $$
+- Time-step size, $$\(\Delta\tau\) $$
+- Diffusion number, $$\(r\)$$
 
 The spatial-grid study used
 
-$$
-\Delta Y=0.2,\quad 0.1,\quad 0.05
-$$
+$$ \Delta Y=0.2,\quad 0.1,\quad 0.05 $$
 
 with a constant diffusion number of \(r=0.25\).
 
-A diffusion-number study was also performed using a constant spatial spacing of \(\Delta Y=0.1\).
+A diffusion-number study was also performed using a constant spatial spacing of $$\(\Delta Y=0.1\)$$.
 
 ## Results
 
@@ -113,9 +104,7 @@ The wall-shear error remained larger than the velocity-profile and flow-rate err
 
 The explicit Euler method remained stable when
 
-$$
-r\leq\frac{1}{2}.
-$$
+$$ r\leq\frac{1}{2}. $$
 
 Changing the diffusion number did not produce a perfectly monotonic error trend because spatial and temporal discretization errors interact. For the RK4 method, the error was nearly constant over several time-step sizes because the fixed spatial grid limited the overall accuracy.
 
@@ -129,11 +118,11 @@ Changing the diffusion number did not produce a perfectly monotonic error trend 
 
 1. Download or clone this repository.
 2. Open `tf_2_parallelplate.m` in MATLAB.
-3. Select the desired values of \(\Delta Y\), \(r\), and \(\Delta\tau\).
+3. Select the desired values of $\(\Delta Y\)$, $\(r\)$, and $\(\Delta\tau\).$
 4. Run the script.
 5. The velocity-profile, flow-rate, wall-shear, and error plots will be generated.
 
 ## Author
-
+Hannah Douthit
 Hannah Douthit  
 AE 601
